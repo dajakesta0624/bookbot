@@ -1,10 +1,11 @@
 def get_book_text(filepath):
-    with open(filepath, 'r') as f:
+    """Reads the contents of a file and returns it as a string."""
+    with open(filepath, 'r', encoding='utf-8') as f:
         file_contents = f.read()
     return file_contents
 
 def main():
-    # Update the path to include the books folder
+    """Main function to print the contents of Frankenstein."""
     book_text = get_book_text('books/frankenstein.txt')
     print(book_text)
 
